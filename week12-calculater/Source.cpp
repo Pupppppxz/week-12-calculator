@@ -44,14 +44,21 @@ int main()
     printf("Select : "); 
     scanf("%d", &key);
 
-    if (key == 1)
-        Sum(&num[0], &num[1]);
-    else if (key == 2)
-        Min(&num[0], &num[1]);
-    else if (key == 3)
-        Mul(&num[0], &num[1]);
-    else if (key == 4)
-        Div(&num[0], &num[1]);
-
+    if (&num[0] != NULL || &num[1] != NULL)
+    {
+        if (key == 1)
+            Sum(&num[0], &num[1]);
+        else if (key == 2)
+            Min(&num[0], &num[1]);
+        else if (key == 3)
+            Mul(&num[0], &num[1]);
+        else if (key == 4)
+            Div(&num[0], &num[1]);
+    }
+    else
+    {
+        printf("Error");
+    }
+    
     return 0;
 }
